@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de QR Code avec Logo</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Créateur de QR Code Personnalisé 🎨</h2>
+        <p>Entrez l'URL ou le texte, puis ajoutez votre logo personnalisé.</p>
+
+        <div class="input-group">
+            <label class="input-label" for="data-input">URL ou Texte</label>
+            <input type="text" id="data-input" placeholder="Ex: https://votre-site.com" value="https://www.google.com">
+        </div>
+
+        <div class="input-group">
+            <label class="input-label" for="logo-input">Logo (optionnel)</label>
+            <div class="file-input-wrapper">
+                <input type="file" id="logo-input" accept="image/png, image/jpeg, image/jpg">
+                <label for="logo-input" class="file-input-label">
+                    <span>📎 Choisir un fichier</span>
+                </label>
+            </div>
+        </div>
+
+        <button onclick="generateCustomQRCode()">Générer le QR Code</button>
+
+        <div id="qrcode-container">
+            <canvas id="qrcode-canvas" width="300" height="300"></canvas>
+            <img id="logo-overlay" alt="Votre Logo">
+        </div>
+
+        <button id="download-btn" style="display:none; margin-top: 20px;" onclick="downloadQRCode()">Télécharger l'image</button>
+    </div>
+
+    <footer>
+        <p>Made by <a href="https://github.com/harry4567/QRgen" target="_blank">QRgen</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
