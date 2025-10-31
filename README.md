@@ -1,0 +1,1 @@
+QRGen est un simple générateur de QR code. Il vous suffit de mettre ces 3 fichiers sur votre site, et vous pourrez générer des qrcode, ainsi que toutes les personnes le souhaitant. Il est possible de mettre le logo souhaité au centre du qr code
